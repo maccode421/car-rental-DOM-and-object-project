@@ -1,10 +1,8 @@
 var carRental = { name: "Enterprise Car Rental",
     ecoCars: 100,
     ecoCarsRented: 0,
-    // ecoCarsAvail: 90,
     midCars: 100,
     midCarsRented: 0,
-    // midCarsAvail: 80
 };
 
 function button() {
@@ -18,9 +16,6 @@ function button() {
 }
     
 function button1() {
-//   document.getElementById("ecoCarAvail").innerHTML = carRental.ecoCarsAvail;
-//   carRental.ecoCarsAvail = carRental.ecoCarsAvail--;
-//   return carRental.ecoCarsAvail--;
     carRental.ecoCarsAvail--;
     carRental.ecoCarsRented++;
     button();
@@ -28,9 +23,6 @@ function button1() {
 
 
 function button2() {
-//  document.getElementById("midCarAvail").innerHTML = carRental.midCarsAvail;
-//  carRental.midCarsAvail = carRental.midCarsAvail--;
-//   return carRental.midCarsAvail--;
     carRental.midCarsAvail--;
     carRental.midCarsRented++;
     button();
