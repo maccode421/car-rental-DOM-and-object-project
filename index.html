@@ -9,29 +9,43 @@
 <body>
     <h1>Business Name</h1>
     <p id="bizName"></p>
-    
+
     <h3>Economy Cars:</h3>
     <p id="ecoCar"></p>
-    
+
     <h3>Rented</h3>
     <p id="ecoCarRent"></p>
-    
+
     <h3>Available</h3>
     <p id="ecoCarAvail"></p>
-    
+
     <h3>Midsize Cars:</h3>
     <p id="midCar"></p>
-    
-     <h3>Rented</h3>
+
+    <h3>Rented</h3>
     <p id="midCarRent"></p>
-    
+
     <h3>Available</h3>
     <p id="midCarAvail"></p>
-    
+
     <button type="button" onClick="button()">Update Availability</button>
     <button type="button" onClick="button1()">Rent out 1 Economy Car</button>
     <button type="button" onClick="button2()">Rent out 1 Midsize Car</button>
     
+    <form style="width: 40vw;">
+        <fieldset>
+            <legend>Renter Form</legend>
+            <select id="" name="cars" onChange="">
+                <option value="economyCar">Economy Car</option>
+                <option value="midsizeCar">Midsize Car</option>
+            </select><br><br><br>
+        
+            <input type="text" name="firstname" placeHolder="First name"><br> 
+            <input type="text" name="lastname" placeHolder="Last name"><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
     <script type="text/javascript" src="cars.js"></script>
 </body>
 </html>
