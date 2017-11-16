@@ -18,14 +18,14 @@ var rental = {
         }
     ],
     
-    carType: [
+    carTypes: [
         {
             type: "economy",
-            price: 19.99
+            price: "$19.99"
         },
         {
             type: "midsize",
-            price: 29.99
+            price: "$29.99"
         }
     ]
 };
@@ -51,3 +51,23 @@ function button2() {
     carRental.midCarsRented++;
     button();
 }
+
+function carOption() {
+    var cars = document.getElementById("car-type").value;
+    var carSelected = document.getElementById("type").innerHTML = "You selected: " + cars;
+    
+    document.getElementById("ecoCarAvail").innerHTML = carRental.ecoCars - carRental.ecoCarsRented;
+    document.getElementById("price").innerHTML = rental.carTypes[0].price;
+    
+    document.getElementById("midCarAvail").innerHTML = carRental.midCars - carRental.midCarsRented;
+    document.getElementById("price").innerHTML = rental.carTypes[1].price;
+    
+    // if (carSelected.value === "economy") {
+    //     return rental.carTypes[0];
+    // } else {
+    //     return document.getElementById("price").innerHTML = rental.carTypes[1] + ": " + rental.carTypes[1];
+    // }
+}
+
+// function submit() {
+// }

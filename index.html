@@ -7,9 +7,12 @@
     <title>Car Rental</title>
 </head>
 <body>
+    <div>
     <h1>Business Name</h1>
     <p id="bizName"></p>
-
+    </div>
+    
+    <div>
     <h3>Economy Cars:</h3>
     <p id="ecoCar"></p>
 
@@ -18,7 +21,10 @@
 
     <h3>Available</h3>
     <p id="ecoCarAvail"></p>
-
+    <!--Price: <p id="ecoPrice"></p>-->
+    </div>
+    
+    <div>
     <h3>Midsize Cars:</h3>
     <p id="midCar"></p>
 
@@ -27,22 +33,27 @@
 
     <h3>Available</h3>
     <p id="midCarAvail"></p>
-
+    <!--Price: <p id="midPrice"></p>-->
+    </div>
+    
     <button type="button" onClick="button()">Update Availability</button>
     <button type="button" onClick="button1()">Rent out 1 Economy Car</button>
     <button type="button" onClick="button2()">Rent out 1 Midsize Car</button>
     
-    <form style="width: 40vw;">
+    <form style="width: 50vw;">
         <fieldset>
             <legend>Renter Form</legend>
-            <select id="" name="cars" onChange="">
-                <option value="economyCar">Economy Car</option>
-                <option value="midsizeCar">Midsize Car</option>
+            <select id="car-type" name="cars" onChange="carOption()">
+                <option value="" disabled selected hidden>Select Car Option</option>
+                <option value="economy" required>Economy Car</option>
+                <option value="midsize" required>Midsize Car</option>
             </select><br><br><br>
+            <p id="type"></p>
+            <p id="price"></p>
         
-            <input type="text" name="firstname" placeHolder="First name"><br> 
-            <input type="text" name="lastname" placeHolder="Last name"><br>
-            <input type="submit" value="Submit">
+            <input type="text" name="firstname" placeHolder="First name" value="" required><br> 
+            <input type="text" name="lastname" placeHolder="Last name" value="" required><br>
+            <input type="submit" id="" onsubmit="submit()" value="Submit">
         </fieldset>
     </form>
 
