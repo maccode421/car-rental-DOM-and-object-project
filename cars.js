@@ -1,8 +1,33 @@
-var carRental = { name: "Enterprise Car Rental",
+var carRental = { 
+    "name": "Enterprise Car Rental",
     ecoCars: 100,
     ecoCarsRented: 0,
     midCars: 100,
-    midCarsRented: 0,
+    midCarsRented: 0
+};
+
+var rental = {
+    renters: [
+        {
+            firstName: "John",
+            lastName: "Doe"
+        },
+        {
+            firstName: "Jane",
+            lastName: "Fonda"
+        }
+    ],
+    
+    carType: [
+        {
+            type: "economy",
+            price: 19.99
+        },
+        {
+            type: "midsize",
+            price: 29.99
+        }
+    ]
 };
 
 function button() {
@@ -20,7 +45,6 @@ function button1() {
     carRental.ecoCarsRented++;
     button();
 }
-
 
 function button2() {
     carRental.midCarsAvail--;
