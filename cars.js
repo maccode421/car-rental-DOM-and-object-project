@@ -18,7 +18,7 @@ var rental = {
         }
     ],
     
-    carTypes: [
+    carType: [
         {
             type: "economy",
             price: "$19.99"
@@ -54,20 +54,28 @@ function button2() {
 
 function carOption() {
     var cars = document.getElementById("car-type").value;
-    var carSelected = document.getElementById("type").innerHTML = "You selected: " + cars;
-    
+    var economy = rental.carType[0].price;
+    var midsize = rental.carType[1].price;
+    document.getElementById("displayInfo").innerHTML = "You selected: " + cars + " - " + economy;
+
+    document.getElementById("ecoCar").innerHTML = carRental.ecoCars;
+    document.getElementById("ecoCarRent").innerHTML = carRental.ecoCarsRented;
     document.getElementById("ecoCarAvail").innerHTML = carRental.ecoCars - carRental.ecoCarsRented;
-    document.getElementById("price").innerHTML = rental.carTypes[0].price;
     
-    document.getElementById("midCarAvail").innerHTML = carRental.midCars - carRental.midCarsRented;
-    document.getElementById("price").innerHTML = rental.carTypes[1].price;
+    // document.getElementById("displayInfo").innerHTML = "You selected: " + cars + " - " + rental.carTypes[1].price;
     
-    // if (carSelected.value === "economy") {
-    //     return rental.carTypes[0];
-    // } else {
-    //     return document.getElementById("price").innerHTML = rental.carTypes[1] + ": " + rental.carTypes[1];
+    // document.getElementById("midCar").innerHTML = carRental.midCars;
+    // document.getElementById("midCarRent").innerHTML = carRental.midCarsRented;
+    // document.getElementById("midCarAvail").innerHTML = carRental.midCars - carRental.midCarsRented;
+
+
+    // if (economy !== "none" ) {
+    //     return midsize;
     // }
+    // button1();
 }
 
-// function submit() {
-// }
+function submit() {
+    carRental.midCarsAvail--;
+    carRental.midCarsRented++;
+}

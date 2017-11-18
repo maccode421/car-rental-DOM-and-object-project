@@ -12,7 +12,7 @@
     <p id="bizName"></p>
     </div>
     
-    <div>
+    <div class="container">
     <h3>Economy Cars:</h3>
     <p id="ecoCar"></p>
 
@@ -24,7 +24,7 @@
     <!--Price: <p id="ecoPrice"></p>-->
     </div>
     
-    <div>
+    <div class="container">
     <h3>Midsize Cars:</h3>
     <p id="midCar"></p>
 
@@ -47,13 +47,12 @@
                 <option value="" disabled selected hidden>Select Car Option</option>
                 <option value="economy" required>Economy Car</option>
                 <option value="midsize" required>Midsize Car</option>
-            </select><br><br><br>
-            <p id="type"></p>
-            <p id="price"></p>
-        
+            </select><br><br>
+            <p id="displayInfo"></p>
+            
             <input type="text" name="firstname" placeHolder="First name" value="" required><br> 
             <input type="text" name="lastname" placeHolder="Last name" value="" required><br>
-            <input type="submit" id="" onsubmit="submit()" value="Submit">
+            <button type="submit" id="submit" onClick="submit()" value="Submit">Submit</button>
         </fieldset>
     </form>
 
