@@ -21,7 +21,6 @@
 
     <h3>Available</h3>
     <p id="ecoCarAvail"></p>
-    <!--Price: <p id="ecoPrice"></p>-->
     </div>
     
     <div class="container">
@@ -33,26 +32,30 @@
 
     <h3>Available</h3>
     <p id="midCarAvail"></p>
-    <!--Price: <p id="midPrice"></p>-->
     </div>
     
     <button type="button" onClick="button()">Update Availability</button>
     <button type="button" onClick="button1()">Rent out 1 Economy Car</button>
     <button type="button" onClick="button2()">Rent out 1 Midsize Car</button>
     
-    <form style="width: 50vw;">
+    <hr>
+    
+    <form id="renterForm" style="width: 50vw;">
         <fieldset>
             <legend>Renter Form</legend>
-            <select id="car-type" name="cars" onChange="carOption()">
+            <div>
+            <select id="selectType" name="cars" onchange="carOption()">
                 <option value="" disabled selected hidden>Select Car Option</option>
                 <option value="economy" required>Economy Car</option>
                 <option value="midsize" required>Midsize Car</option>
             </select><br><br>
+            </div>
+            <p id="price"></p>
             <p id="displayInfo"></p>
             
             <input type="text" name="firstname" placeHolder="First name" value="" required><br> 
             <input type="text" name="lastname" placeHolder="Last name" value="" required><br>
-            <button type="submit" id="submit" onClick="submit()" value="Submit">Submit</button>
+            <button type="submit" id="submit" onClick="submit()" value="submit">Submit</button>
         </fieldset>
     </form>
 
