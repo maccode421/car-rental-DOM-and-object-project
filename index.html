@@ -44,18 +44,20 @@
         <fieldset>
             <legend>Renter Form</legend>
             <div>
-            <select id="selectType" name="cars" onchange="carOption()">
-                <option value="" disabled selected hidden>Select Car Option</option>
-                <option value="economy" required>Economy Car</option>
-                <option value="midsize" required>Midsize Car</option>
-            </select><br><br>
+                <select id="selectType" name="cars" onchange="carOption()">
+                    <option value="" disabled selected hidden>Select Car Option</option>
+                    <option value="economy" required>Economy Car</option>
+                    <option value="midsize" required>Midsize Car</option>
+                </select><br><br>
             </div>
-            <p id="price"></p>
-            <p id="displayInfo"></p>
-            
-            <input type="text" name="firstname" placeHolder="First name" value="" required><br> 
-            <input type="text" name="lastname" placeHolder="Last name" value="" required><br>
-            <button type="submit" id="submit" onClick="submit()" value="submit">Submit</button>
+            <div style="height: 10vh;">
+                <p id="displayInfo"></p>
+            </div>
+            <div>
+                <input type="text" name="firstname" placeHolder="First name" value="" required><br> 
+                <input type="text" name="lastname" placeHolder="Last name" value="" required><br>
+                <button type="submit" id="submit" onClick="reserveCar()" value="submit">Reserve Car</button>
+            </div>
         </fieldset>
     </form>
 
